@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4354ddf4-9707-4339-a272-67cff62b4a1f" name="Default Changelist" comment="" />
+    <list default="true" id="7b073d7e-51d2-4e7c-9ea3-1eb189a24541" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/google-java-format.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/google-java-format.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/app.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/default.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/default.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lastupdate.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/lastupdate.tmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/commentsRouter_.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/commentsRouter_.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/commentsRouter_controllers.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.gohtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.gohtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pan.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/views/pan.gohtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/reg.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/views/reg.gohtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/test.gohtml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
@@ -19,12 +32,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
+        <option value="CSS File" />
         <option value="Go File" />
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="D:\Program Files\go" />
+  <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -42,43 +58,39 @@
   <component name="MavenRunner">
     <option name="jreName" value="1.8" />
   </component>
-  <component name="ProjectId" id="1UoZETqdEhwhvhsPv12rnKu0pqI" />
+  <component name="ProjectId" id="1V5egXL8uxX0F4LhccxkxkfEY1e" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/files" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/admin" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\HJJ\OneDrive\go\src\tempyun\files" />
-      <recent name="D:\HJJ\OneDrive\go\src\tempyun\files\test" />
-      <recent name="D:\HJJ\OneDrive\go\src\tempyun\files\danbai" />
-      <recent name="D:\HJJ\OneDrive\go\src\tempyun\static\js" />
-      <recent name="D:\HJJ\OneDrive\go\src\tempyun\static\js\ufinder" />
+      <recent name="D:\HJJ\WORK\GO\src\tempyun\views\admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\HJJ\OneDrive\go\src\tempyun\static\css" />
-      <recent name="D:\HJJ\OneDrive\go\src\tempyun\views" />
-      <recent name="D:\HJJ\OneDrive\go\src\tempyun\files\danbai" />
-      <recent name="D:\HJJ\OneDrive\go\src\tempyun\utils" />
-      <recent name="D:\HJJ\OneDrive\go\src\tempyun\service\user" />
+      <recent name="D:\HJJ\WORK\GO\src\tempyun\views\admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -118,105 +130,71 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4354ddf4-9707-4339-a272-67cff62b4a1f" name="Default Changelist" comment="" />
-      <created>1576024796428</created>
+      <changelist id="7b073d7e-51d2-4e7c-9ea3-1eb189a24541" name="Default Changelist" comment="" />
+      <created>1576547494827</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1576024796428</updated>
-      <workItem from="1576024798666" duration="126000" />
-      <workItem from="1576024974390" duration="582000" />
-      <workItem from="1576025574580" duration="140000" />
-      <workItem from="1576025748977" duration="300000" />
-      <workItem from="1576026489649" duration="7354000" />
-      <workItem from="1576047665959" duration="4696000" />
-      <workItem from="1576052400255" duration="47000" />
-      <workItem from="1576053194438" duration="2237000" />
-      <workItem from="1576132021865" duration="6670000" />
-      <workItem from="1576202570013" duration="6785000" />
-      <workItem from="1576237790625" duration="5838000" />
-      <workItem from="1576330411453" duration="6858000" />
-      <workItem from="1576381227891" duration="14457000" />
-      <workItem from="1576456002266" duration="10361000" />
-      <workItem from="1576466504571" duration="2290000" />
-      <workItem from="1576477089485" duration="7103000" />
+      <updated>1576547494827</updated>
+      <workItem from="1576547496953" duration="668000" />
+      <workItem from="1576548288818" duration="5634000" />
+      <workItem from="1576563341175" duration="5362000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="799" y="175" key="#GOROOT" timestamp="1576024812353">
+    <state x="735" y="237" key="#GOROOT" timestamp="1576547507157">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="799" y="175" key="#GOROOT/0.0.1920.1050@0.0.1920.1050" timestamp="1576024812353" />
-    <state x="734" y="182" key="#Go_Modules_(vgo)" timestamp="1576050040838">
+    <state x="735" y="237" key="#GOROOT/0.0.1920.1050@0.0.1920.1050" timestamp="1576547507157" />
+    <state x="621" y="243" key="#Go_Modules_(vgo)" timestamp="1576550753886">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="734" y="182" key="#Go_Modules_(vgo)/0.0.1920.1050@0.0.1920.1050" timestamp="1576050040838" />
-    <state x="727" y="353" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576047779062">
+    <state x="621" y="243" key="#Go_Modules_(vgo)/0.0.1920.1050@0.0.1920.1050" timestamp="1576550753886" />
+    <state x="348" y="208" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576547555397">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="727" y="353" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1576047779062" />
-    <state x="598" y="273" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1576456035320">
+    <state x="348" y="208" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1576547555397" />
+    <state width="1341" height="268" key="GridCell.Tab.0.bottom" timestamp="1576568735657">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="598" y="273" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1576456035320" />
-    <state x="883" y="249" key="FileChooserDialogImpl" timestamp="1576203806688">
+    <state width="1341" height="268" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1576568735657" />
+    <state width="1341" height="268" key="GridCell.Tab.0.center" timestamp="1576568735657">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="883" y="249" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1576203806688" />
-    <state width="1340" height="252" key="GridCell.Tab.0.bottom" timestamp="1576484203475">
+    <state width="1341" height="268" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1576568735657" />
+    <state width="1341" height="268" key="GridCell.Tab.0.left" timestamp="1576568735657">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1340" height="252" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1576484203475" />
-    <state width="1340" height="252" key="GridCell.Tab.0.center" timestamp="1576484203475">
+    <state width="1341" height="268" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1576568735657" />
+    <state width="1341" height="268" key="GridCell.Tab.0.right" timestamp="1576568735657">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1340" height="252" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1576484203475" />
-    <state width="1340" height="252" key="GridCell.Tab.0.left" timestamp="1576484203475">
+    <state width="1341" height="268" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1576568735657" />
+    <state width="1340" height="331" key="GridCell.Tab.1.bottom" timestamp="1576548164980">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1340" height="252" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1576484203475" />
-    <state width="1340" height="252" key="GridCell.Tab.0.right" timestamp="1576484203475">
+    <state width="1340" height="331" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1576548164980" />
+    <state width="1340" height="331" key="GridCell.Tab.1.center" timestamp="1576548164980">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1340" height="252" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1576484203475" />
-    <state width="1877" height="337" key="GridCell.Tab.1.bottom" timestamp="1576466486734">
+    <state width="1340" height="331" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1576548164980" />
+    <state width="1340" height="331" key="GridCell.Tab.1.left" timestamp="1576548164979">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="337" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1576466486734" />
-    <state width="1877" height="337" key="GridCell.Tab.1.center" timestamp="1576466486734">
+    <state width="1340" height="331" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1576548164979" />
+    <state width="1340" height="331" key="GridCell.Tab.1.right" timestamp="1576548164980">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="337" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1576466486734" />
-    <state width="1877" height="337" key="GridCell.Tab.1.left" timestamp="1576466486734">
+    <state width="1340" height="331" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1576548164980" />
+    <state x="409" y="270" width="647" height="524" key="find.popup" timestamp="1576567475542">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="337" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1576466486734" />
-    <state width="1877" height="337" key="GridCell.Tab.1.right" timestamp="1576466486734">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="337" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1576466486734" />
-    <state x="97" y="132" key="SettingsEditor" timestamp="1576027385926">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="97" y="132" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1576027385926" />
-    <state width="700" height="511" key="XDebugger.FullValuePopup" timestamp="1576464629687">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="700" height="511" key="XDebugger.FullValuePopup/0.0.1920.1050@0.0.1920.1050" timestamp="1576464629687" />
-    <state x="608" y="427" width="786" height="623" key="find.popup" timestamp="1576478051440">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="608" y="427" width="786" height="623" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1576478051440" />
-    <state x="937" y="208" key="refactoring.ChangeSignatureDialog" timestamp="1576459425934">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="937" y="208" key="refactoring.ChangeSignatureDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1576459425934" />
-    <state x="864" y="224" width="672" height="678" key="search.everywhere.popup" timestamp="1576480496449">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="864" y="224" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1576480496449" />
+    <state x="409" y="270" width="647" height="524" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1576567475542" />
   </component>
 </project>

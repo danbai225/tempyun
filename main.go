@@ -5,6 +5,7 @@ import (
 	"tempyun/filter"
 	_ "tempyun/routers"
 	"tempyun/service/userservice"
+
 )
 
 func main() {
@@ -20,3 +21,4 @@ func initPath()  {
 		beego.SetStaticPath("/"+users[i].Username,"files/"+users[i].Username)
 	}
 }
+                                  

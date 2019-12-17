@@ -36,17 +36,17 @@ func init() {
 
     beego.GlobalControllerRouter["tempyun/controllers:MainController"] = append(beego.GlobalControllerRouter["tempyun/controllers:MainController"],
         beego.ControllerComments{
-            Method: "Pan",
-            Router: `/pan`,
-            AllowHTTPMethods: []string{"get"},
+            Method: "Reg",
+            Router: `/reg`,
+            AllowHTTPMethods: []string{"get","post"},
             MethodParams: param.Make(),
             Filters: nil,
             Params: nil})
 
     beego.GlobalControllerRouter["tempyun/controllers:MainController"] = append(beego.GlobalControllerRouter["tempyun/controllers:MainController"],
         beego.ControllerComments{
-            Method: "Test",
-            Router: `/test`,
+            Method: "Pan",
+            Router: `/tpan`,
             AllowHTTPMethods: []string{"get"},
             MethodParams: param.Make(),
             Filters: nil,

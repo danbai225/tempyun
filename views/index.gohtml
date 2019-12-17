@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>临时云</title>
+    <link rel="icon" href="/static/img/logo.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/static/img/logo.png" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+    <script type="text/javascript" src="/static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="/static/js/vector.js"></script>
 </head>
 <body>
-欢迎使用临时云
+
+<div id="container">
+    <div id="output">
+        <div class="containerT">
+            <img src="/static/img/logo.png">
+            <div class="info">
+                <span class="tempyun">临时云</span>
+                <p>用于临时测试前端页面、json数据,临时网盘等</p>
+            </div>
+            <div class="btgo">
+                <button class="animated-button-2" onclick="window.location.href='/login'">登陆</button>
+                <button class="animated-button-2" onclick="window.location.href='/reg'">注册</button>
+                <button class="animated-button-2" onclick="window.open('https://p00q.cn')">作者博客</button>
+                <button class="animated-button-2" onclick="window.open('https://github.com/danbai225/tempyun')">项目地址</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        Victor("container", "output");   //背景函数
+    });
+</script>
+<div style="text-align:center;">
+</div>
 </body>
 </html>

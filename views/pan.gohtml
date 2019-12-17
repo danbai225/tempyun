@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ufinder demo</title>
+    <title>临时空间管理</title>
     <script src="/static/js/jquery-1.11.0.min.js"></script>
     <link rel="stylesheet" href="/static/css/ufinder/ufinder.css"/>
+    <link rel="icon" href="/static/img/logo.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/static/img/logo.png" type="image/x-icon"/>
 </head>
 <body>
+欢迎{{.User.Username}}
+<a target="_blank" href="http://{{.User.Username}}.tempyun.com">通过域名:{{.User.Username}}.tempyun.com访问你的文件吧</a>
 <div id="container"></div>
 <script src="/static/js/ufinder/ufinder.config.js"></script>
 <script src="/static/js/ufinder/ufinder.js"></script>

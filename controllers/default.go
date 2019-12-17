@@ -13,17 +13,15 @@ type MainController struct {
 
 // @router / [get]
 func (c *MainController) Index() {
-	c.TplName = "index.html"
-}
-
-// @router /test [get]
-func (c *MainController) Test() {
-	c.Ctx.WriteString("test0")
-	println(c.GetSession("user"))
+	c.TplName = "index.gohtml"
 }
 
 // @router /login [get,post]
 func (c *MainController) Login() {
+	if c.GetSession("user")!=nil{
+		c.Redirect("/tpan", 302)
+		return
+	}
 	if c.Ctx.Request.Method == "GET" {
 		c.TplName = "login.gohtml"
 		return
@@ -32,9 +30,8 @@ func (c *MainController) Login() {
 	if ok {
 		c.SetSession("user", user)
 		c.Ctx.SetCookie("username",user.Username,60*60)
-		println(c.CruSession.SessionID())
 		c.Ctx.SetCookie("beegosessionID",c.CruSession.SessionID(),60*60)
-		c.Redirect("/", 302)
+		c.Redirect("/tpan", 302)
 	} else {
 		c.Data["Msg"] = "账号密码错误"
 		c.TplName = "login.gohtml"
@@ -67,12 +64,11 @@ func (c *MainController) Reg() {
 	c.TplName = "reg.gohtml"
 	return
 }
-
-// @router /pan [get]
+// @router /tpan [get]
 func (c *MainController) Pan() {
-
 	if c.GetSession("user") == nil {
 		c.Redirect("/login", 302)
 	}
+	c.Data["User"]=c.GetSession("user")
 	c.TplName = "pan.gohtml"
 }
