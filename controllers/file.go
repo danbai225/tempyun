@@ -54,7 +54,7 @@ func (c *MainController) Service() {
 		rjson = fileservice.MkFile(user.Username + c.GetString("target"))
 		break
 	case "rename":
-		rjson = fileservice.ReName(user.Username + c.GetString("target"),user.Username +c.GetString("name"))
+		rjson = fileservice.ReName(user.Username+c.GetString("target"), user.Username+c.GetString("name"))
 		break
 	}
 	b, _ := json.Marshal(rjson)

@@ -18,11 +18,12 @@ func AddUser(user models.User) bool {
 		return false
 	}
 	os.Mkdir("./files/"+user.Username, os.ModePerm)
-	utils.CopyFile("files/index.html","files/"+user.Username+"/index.html")
-	beego.SetStaticPath("/"+user.Username,"files/"+user.Username)
+	utils.CopyFile("files/index.html", "files/"+user.Username+"/index.html")
+	beego.SetStaticPath("/"+user.Username, "files/"+user.Username)
 	return true
 }
-func UpdateUser(user models.User) bool {	var o = dao.Getcon()
+func UpdateUser(user models.User) bool {
+	var o = dao.Getcon()
 	user1 := models.User{Username: user.Username}
 	if o.Read(&user1) == nil {
 		varType := reflect.ValueOf(user)
@@ -46,8 +47,8 @@ func GetUser(username string) models.User {
 	var o = dao.Getcon()
 	user := models.User{Username: username}
 	err := o.Read(&user)
-	if err!=nil {
-		user.Username=""
+	if err != nil {
+		user.Username = ""
 	}
 	return user
 }

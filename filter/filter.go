@@ -8,6 +8,7 @@ import (
 	"strings"
 )
 
+//子域名转换
 func Ymfilter() {
 	var Filter = func(ctx *context.Context) {
 		doamin := beego.AppConfig.String("doamin")
@@ -19,12 +20,14 @@ func Ymfilter() {
 	}
 	beego.InsertFilter("/*", beego.BeforeRouter, Filter)
 }
+
+//用户文件管理 路径转换过滤器
 func GetFilter() {
 	var FilterUser = func(ctx *context.Context) {
-		cookie := ctx.GetCookie("username")
-		if true {
+		user := ctx.GetCookie("username")
+		if user != "" {
 			doamin := beego.AppConfig.String("doamin")
-			req := httplib.Get(strings.Replace("http://"+doamin+":"+strconv.Itoa(ctx.Input.Port())+"/"+cookie+ctx.Input.URL(), "/service/files", "", -1))
+			req := httplib.Get(strings.Replace("http://"+doamin+":"+strconv.Itoa(ctx.Input.Port())+"/"+user+ctx.Input.URL(), "/service/files", "", -1))
 			bytes, _ := req.Bytes()
 			ctx.ResponseWriter.Write(bytes)
 		}

@@ -7,6 +7,7 @@ import (
 	"tempyun/utils"
 )
 
+//初始化 根目录
 func Init() entity.Rjson {
 	r := utils.Ok()
 	var data struct {
@@ -18,6 +19,8 @@ func Init() entity.Rjson {
 	r.Data = data
 	return *r
 }
+
+//输出目标目录
 func Ls(target string) entity.Rjson {
 	r := utils.Ok()
 	var data struct{ Files []entity.File `json:"files"` }
@@ -32,6 +35,8 @@ func Ls(target string) entity.Rjson {
 	r.Data = data
 	return *r
 }
+
+//移除文件或目录
 func Rm(path string, rms []string) entity.Rjson {
 	r := utils.Ok()
 	for i := 0; i < len(rms); i++ {
@@ -39,6 +44,8 @@ func Rm(path string, rms []string) entity.Rjson {
 	}
 	return *r
 }
+
+//创建目录
 func Mkdir(target string) entity.Rjson {
 	r := utils.Ok()
 	os.MkdirAll("files/"+target, os.ModePerm)
@@ -47,6 +54,8 @@ func Mkdir(target string) entity.Rjson {
 	r.Data = data
 	return *r
 }
+
+//创建文件
 func MkFile(target string) entity.Rjson {
 	r := utils.Ok()
 	os.Create("files/" + target)
@@ -55,11 +64,13 @@ func MkFile(target string) entity.Rjson {
 	r.Data = data
 	return *r
 }
-func ReName(target string,name string) entity.Rjson {
+
+//重命名
+func ReName(target string, name string) entity.Rjson {
 	r := utils.Ok()
-	os.Rename("files/"+target,"files/"+name)
+	os.Rename("files/"+target, "files/"+name)
 	var data struct{ File entity.File `json:"file"` }
-	data.File = utils.FileInfo("files/"+name)
+	data.File = utils.FileInfo("files/" + name)
 	r.Data = data
 	return *r
 }
