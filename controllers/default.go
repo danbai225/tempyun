@@ -44,18 +44,24 @@ func (c *MainController) Reg() {
 		c.TplName = "reg.gohtml"
 		return
 	}
-	if c.GetString("password") != c.GetString("vpassword") {
+	pass:=c.GetString("password")
+	username := c.GetString("username")
+	if len(username)<1||len(pass)<4{
+		c.Data["Msg"] = "长度太短哦"
+		c.TplName = "reg.gohtml"
+		return
+	}
+	if pass != c.GetString("vpassword") {
 		c.Data["Msg"] = "密码不一致"
 	}
-	username := c.GetString("username")
+
 	if ok, _ := regexp.MatchString("^[a-z0-9]{4,16}$", username); !ok {
 		c.Data["Msg"] = "用户名为a-z 0-9 的4-16长度字符串"
 	}
 	user := userservice.GetUser(username)
 	if user.Username == "" {
 		email := c.GetString("email")
-		pas := c.GetString("password")
-		us := models.User{Username: username, Password: pas, Email: email, Headurl: "http://www.gravatar.com/avatar/" + username + "?s=128&d=monsterid"}
+		us := models.User{Username: username, Password: pass, Email: email, Headurl: "http://www.gravatar.com/avatar/" + username + "?s=128&d=monsterid"}
 		if userservice.AddUser(us) {
 			c.Data["Msg"] = "注册成功"
 		}
