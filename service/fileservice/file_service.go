@@ -40,6 +40,9 @@ func Ls(target string) entity.Rjson {
 func Rm(path string, rms []string) entity.Rjson {
 	r := utils.Ok()
 	for i := 0; i < len(rms); i++ {
+		if utils.Vdd(rms[i]){
+			return *utils.Err()
+		}
 		os.RemoveAll("files/" + path + rms[i])
 	}
 	return *r
@@ -47,6 +50,9 @@ func Rm(path string, rms []string) entity.Rjson {
 
 //创建目录
 func Mkdir(target string) entity.Rjson {
+	if utils.Vdd(target){
+		return *utils.Err()
+	}
 	r := utils.Ok()
 	os.MkdirAll("files/"+target, os.ModePerm)
 	var data struct{ File entity.File `json:"file"` }
@@ -57,6 +63,9 @@ func Mkdir(target string) entity.Rjson {
 
 //创建文件
 func MkFile(target string) entity.Rjson {
+	if utils.Vdd(target){
+		return *utils.Err()
+	}
 	r := utils.Ok()
 	os.Create("files/" + target)
 	var data struct{ File entity.File `json:"file"` }
@@ -67,6 +76,9 @@ func MkFile(target string) entity.Rjson {
 
 //重命名
 func ReName(target string, name string) entity.Rjson {
+	if utils.Vdd(target)||utils.Vdd(name){
+		return *utils.Err()
+	}
 	r := utils.Ok()
 	os.Rename("files/"+target, "files/"+name)
 	var data struct{ File entity.File `json:"file"` }

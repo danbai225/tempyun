@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"github.com/astaxie/beego"
 	"path"
-	"strings"
 	"tempyun/entity"
 	"tempyun/models"
 	"tempyun/service/fileservice"
@@ -19,7 +18,7 @@ type FileController struct {
 func (c *MainController) Service() {
 	rjson := entity.Rjson{}
 
-	if strings.Contains(c.GetString("target"),".."){
+	if utils.Vdd(c.GetString("target")){
 		c.Ctx.WriteString("非法路径!")
 		return
 	}
@@ -40,10 +39,14 @@ func (c *MainController) Service() {
 		rjson = fileservice.Rm(user.Username, c.GetStrings("target[]"))
 		break
 	case "upload":
-		file, information, err := c.GetFile("file")                                                   //返回文件，文件信息头，错误信息
-		defer file.Close()                                                                            //关闭上传的文件，否则出现临时文件不清除的情况  mmp错了好多次啊
-		filename := information.Filename                                                              //将文件信息头的信息赋值给filename变量
-		err = c.SaveToFile("file", path.Join("files/"+user.Username+c.GetString("target"), filename)) //保存文件的路径。保存在static/upload中   （文件名）
+		file, information, err := c.GetFile("file")
+		defer file.Close()
+		filename := information.Filename
+		if utils.Vdd(filename){
+			c.Ctx.WriteString("非法路径!")
+			return
+		}
+		err = c.SaveToFile("file", path.Join("files/"+user.Username+c.GetString("target"), filename))
 		if err != nil {
 			rjson = *utils.Err()
 		} else {

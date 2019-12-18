@@ -59,6 +59,10 @@ func (c *MainController) Reg() {
 		c.Data["Msg"] = "用户名为a-z 0-9 的4-16长度字符串"
 		return
 	}
+	if username=="static"||username=="files"||username=="login"||username=="reg"||username=="tpan"||username=="file"{
+		c.Data["Msg"] = "保留用户名"
+		return
+	}
 	user := userservice.GetUser(username)
 	if user.Username == "" {
 		email := c.GetString("email")
