@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"github.com/astaxie/beego"
 	"path"
+	"strings"
 	"tempyun/entity"
 	"tempyun/models"
 	"tempyun/service/fileservice"
@@ -17,6 +18,11 @@ type FileController struct {
 // @router /file/service [get,post]
 func (c *MainController) Service() {
 	rjson := entity.Rjson{}
+
+	if strings.Contains(c.GetString("target"),".."){
+		c.Ctx.WriteString("非法路径!")
+		return
+	}
 	useri := c.GetSession("user")
 	if useri == nil {
 		c.Ctx.WriteString("权限不足!")

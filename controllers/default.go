@@ -40,6 +40,7 @@ func (c *MainController) Login() {
 
 // @router /reg [get,post]
 func (c *MainController) Reg() {
+	c.TplName = "reg.gohtml"
 	if c.Ctx.Request.Method == "GET" {
 		c.TplName = "reg.gohtml"
 		return
@@ -48,15 +49,15 @@ func (c *MainController) Reg() {
 	username := c.GetString("username")
 	if len(username)<1||len(pass)<4{
 		c.Data["Msg"] = "长度太短哦"
-		c.TplName = "reg.gohtml"
 		return
 	}
 	if pass != c.GetString("vpassword") {
 		c.Data["Msg"] = "密码不一致"
+		return
 	}
-
 	if ok, _ := regexp.MatchString("^[a-z0-9]{4,16}$", username); !ok {
 		c.Data["Msg"] = "用户名为a-z 0-9 的4-16长度字符串"
+		return
 	}
 	user := userservice.GetUser(username)
 	if user.Username == "" {
@@ -68,8 +69,6 @@ func (c *MainController) Reg() {
 	} else {
 		c.Data["Msg"] = "用户名已存在"
 	}
-	c.TplName = "reg.gohtml"
-	return
 }
 
 // @router /tpan [get]
