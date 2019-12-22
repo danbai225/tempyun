@@ -5,11 +5,8 @@
       <change afterPath="$PROJECT_DIR$/tempyun.tar.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conf/app.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/default.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/default.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/file.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/file.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter.go" beforeDir="false" afterPath="$PROJECT_DIR$/filter/filter.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lastupdate.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/lastupdate.tmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/fileservice/file_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/fileservice/file_service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/string_utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/string_utils.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +63,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/files/danbai" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -77,10 +74,11 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\HJJ\WORK\GO\src\tempyun\views\admin" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\HJJ\WORK\GO\src\tempyun\files\danbai" />
       <recent name="D:\HJJ\WORK\GO\src\tempyun\views\admin" />
     </key>
   </component>
@@ -136,7 +134,13 @@
       <workItem from="1576592484919" duration="465000" />
       <workItem from="1576593120849" duration="340000" />
       <workItem from="1576631437527" duration="1093000" />
-      <workItem from="1576635878803" duration="3230000" />
+      <workItem from="1576635878803" duration="3952000" />
+      <workItem from="1576654107090" duration="1179000" />
+      <workItem from="1576718047235" duration="79000" />
+      <workItem from="1576723031314" duration="14000" />
+      <workItem from="1576724256187" duration="13000" />
+      <workItem from="1576725917224" duration="40000" />
+      <workItem from="1576975914406" duration="642000" />
     </task>
     <servers />
   </component>
@@ -159,22 +163,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="348" y="208" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1576547555397" />
-    <state width="1877" height="268" key="GridCell.Tab.0.bottom" timestamp="1576638137270">
+    <state width="1341" height="181" key="GridCell.Tab.0.bottom" timestamp="1576976556824">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="268" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1576638137270" />
-    <state width="1877" height="268" key="GridCell.Tab.0.center" timestamp="1576638137269">
+    <state width="1341" height="181" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1576976556824" />
+    <state width="1341" height="181" key="GridCell.Tab.0.center" timestamp="1576976556824">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="268" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1576638137269" />
-    <state width="1877" height="268" key="GridCell.Tab.0.left" timestamp="1576638137269">
+    <state width="1341" height="181" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1576976556824" />
+    <state width="1341" height="181" key="GridCell.Tab.0.left" timestamp="1576976556824">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="268" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1576638137269" />
-    <state width="1877" height="268" key="GridCell.Tab.0.right" timestamp="1576638137270">
+    <state width="1341" height="181" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1576976556824" />
+    <state width="1341" height="181" key="GridCell.Tab.0.right" timestamp="1576976556824">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="268" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1576638137270" />
+    <state width="1341" height="181" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1576976556824" />
     <state width="1340" height="331" key="GridCell.Tab.1.bottom" timestamp="1576548164980">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

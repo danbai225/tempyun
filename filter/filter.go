@@ -11,10 +11,16 @@ import (
 //子域名转换
 func Ymfilter() {
 	var Filter = func(ctx *context.Context) {
+		//跨域
+		ctx.Output.Header("Access-Control-Allow-Origin", "*")
+		ctx.Output.Header("Access-Control-Allow-Methods", "POST,GET,OPTIONS,DELETE")
+		ctx.Output.Header("Access-Control-Allow-Headers", "x-requested-with,content-type")
+		ctx.Output.Header("Access-Control-Allow-Credentials", "true")
 		doamin := beego.AppConfig.String("doamin")
 		if ctx.Input.Host() != doamin {
 			req := httplib.Get(strings.Replace(ctx.Input.Site(), ctx.Input.Host(), doamin, -1) + ":" + strconv.Itoa(ctx.Input.Port()) + "/" + strings.Replace(ctx.Input.Host(), "."+doamin, "", -1) + ctx.Input.URL())
 			bytes, _ := req.Bytes()
+			ctx.ResponseWriter.Header().Set("Content-Type",req.GetRequest().Header.Get("Content-Type"))
 			ctx.ResponseWriter.Write(bytes)
 		}
 	}
