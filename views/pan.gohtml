@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/static/css/ufinder/ufinder.css"/>
     <link rel="icon" href="/static/img/logo.png" type="image/x-icon"/>
     <link rel="shortcut icon" href="/static/img/logo.png" type="image/x-icon"/>
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
 </head>
 <body>
 欢迎{{.User.Username}}
@@ -15,10 +16,38 @@
 <script src="/static/js/ufinder/ufinder.config.js"></script>
 <script src="/static/js/ufinder/ufinder.js"></script>
 <script src="/static/js/ufinder/zh-cn.js"></script>
+<script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
+<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
 <script>
     $(function () {
         window.uf = UF.getUFinder('container');
     });
+</script>
+<!-- input标签作为文件上传入口 -->
+<input type="file" class="filepond">
+
+<!-- 引入FilePond的js -->
+
+<script>
+    FilePond.registerPlugin(FilePondPluginFileValidateType);
+    FilePond.setOptions({
+        server: {
+            url: 'http://tempyun.com',
+            timeout: 7000,
+            process: {
+                url: '/file/zip',
+                method: 'POST',
+                ondata: (formData) => {
+                    formData.append('path',uf._currentPath);
+                    return formData
+                }
+            }
+        }
+    });
+    // FilePond.parse 使用类.filepond解析DOM树的给定部分，并将它们转换为FilePond元素。
+    zipup=FilePond.parse(document.body)[0];
+    zipup.labelIdle="点击这里上传ZIP到当前目录(自动解压)";
+    zipup.acceptedFileTypes=['application/x-zip-compressed'];
 </script>
 </body>
 </html>

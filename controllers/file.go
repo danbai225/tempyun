@@ -3,6 +3,7 @@ package controllers
 import (
 	"encoding/json"
 	"github.com/astaxie/beego"
+	"os"
 	"path"
 	"tempyun/entity"
 	"tempyun/models"
@@ -14,11 +15,35 @@ type FileController struct {
 	beego.Controller
 }
 
+// @router /file/zip [post]
+func (c *MainController) Zip() {
+	useri := c.GetSession("user")
+	if useri == nil {
+		c.Ctx.WriteString("权限不足!")
+		return
+	}
+	user := useri.(models.User)
+	username := user.Username
+	file, information, err := c.GetFile("filepond")
+	if err == nil {
+		defer file.Close()
+		filename := information.Filename
+		if utils.Vdd(c.GetString("path")) {
+			c.Ctx.WriteString("非法路径!")
+			return
+		}
+		c.SaveToFile("filepond", "files/"+username+"/"+filename)
+		fileservice.UnZip("files/"+username+c.GetString("path"), "files/"+username+"/"+filename)
+		os.RemoveAll("files/" + username + "/" + filename)
+	}
+	c.Ctx.WriteString("ok!")
+}
+
 // @router /file/service [get,post]
 func (c *MainController) Service() {
 	rjson := entity.Rjson{}
 
-	if utils.Vdd(c.GetString("target")){
+	if utils.Vdd(c.GetString("target")) {
 		c.Ctx.WriteString("非法路径!")
 		return
 	}
@@ -42,7 +67,7 @@ func (c *MainController) Service() {
 		file, information, err := c.GetFile("file")
 		defer file.Close()
 		filename := information.Filename
-		if utils.Vdd(filename){
+		if utils.Vdd(filename) {
 			c.Ctx.WriteString("非法路径!")
 			return
 		}
@@ -51,7 +76,9 @@ func (c *MainController) Service() {
 			rjson = *utils.Err()
 		} else {
 			rjson = *utils.Ok()
-			var data struct{ File entity.File `json:"file"` }
+			var data struct {
+				File entity.File `json:"file"`
+			}
 			data.File = utils.FileInfo(user.Username + c.GetString("target") + filename)
 			rjson.Data = data
 		}
